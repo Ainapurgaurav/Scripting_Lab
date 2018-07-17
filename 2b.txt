@@ -1,0 +1,9 @@
+def Maximum(lis):
+ if len(lis) == 1:
+ return lis[0]
+ else:
+ lis[1]=max(lis[0],lis[1])
+ return Maximum(lis[1:])
+lis=[int(j) for j in input("Enter the list of
+numbers").split()]
+print ("the greatest number is ", Maximum(lis))

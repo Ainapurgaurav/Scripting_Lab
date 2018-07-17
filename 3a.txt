@@ -1,0 +1,38 @@
+li=[]
+def f2c1(farh):
+return(5.0/9.0)*(farh-32.0)
+def c2f1(cel):
+return (9.0/5.0)*(cel)+32.0
+def c2k1(cel):
+return (cel + 275.15)
+i=True
+while(i):
+ch=input("enter a choice 1.f to c 2. c to f 3.c to k
+4.sorting a/c to input unit value 5.sorting a/c to o/p unit
+value 6.exit\n")
+if(ch=="1"):
+ print("enter a farhenheit value\n")
+ x=float(input())
+ temp=f2c1(x)
+ li.append((x,temp))
+ print(temp)
+if(ch=="2"):
+ print("enter a celcius value\n")
+ y=float(input())
+ temp1=c2f1(y)
+ li.append((y,temp1))
+ print(temp1)
+if(ch=="3"):
+ print("enter a celcius value\n")
+ z=float(input())
+ temp2=c2k1(z)
+ li.append((z,temp2))
+ print(temp2)
+if(ch=="4") :
+ print("the sortest list a/c to i/p unit
+\n",sorted(li,key=lambda x:x[0]))
+if(ch=="5"):
+ print("the sortest list a/c to o/p unit
+\n",sorted(li,key=lambda x:x[1]))
+if(ch=="6"):
+ i=False

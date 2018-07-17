@@ -1,0 +1,9 @@
+def remove_duplicates(numbers):
+ newlist = []
+ for number in numbers:
+ if number not in newlist:
+ newlist.append(number)
+ return newlist
+n=[int(j) for j in input("enter the list\n").split()]
+li=remove_duplicates(n)
+print(li)

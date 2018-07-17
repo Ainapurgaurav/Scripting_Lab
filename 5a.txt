@@ -1,0 +1,18 @@
+import pandas as pd
+titanic_df=pd.read_csv("train.csv")
+print("====Data Header====")
+print(titanic_df.head())
+print("====Data description====")
+titanic_df.info()
+print(titanic_df.describe())
+titanic_df=titanic_df.drop(['PassengerId','Name','Ticket'],axi
+s=1)
+print("===================================")
+print(titanic_df.head())
+titanic_df["Age"]=titanic_df["Age"].fillna("100")
+print(titanic_df["Age"])
+print(titanic_df[["Sex","Survived"]].groupby(["Sex"],as_index=
+False).mean())
+print(titanic_df[["Pclass","Survived"]].groupby(["Pclass"],as_
+index=False).mean().sort_values(by='Survived',ascending=False)
+)

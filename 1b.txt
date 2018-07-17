@@ -1,0 +1,8 @@
+S= [int(x) for x in input("enter the numbers").split()]
+M=[]
+for i in S:
+if(i%2==0):
+ M.append(i)
+print("even no. list ",M)
+M.reverse()
+print("Reversed list ",M)
